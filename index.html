@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        fieldset {
+            width: -moz-fit-content;
+            width: fit-content;
+        }
+
+        div.input {
+            margin: 0.75rem 0;
+        }
+        
+        #calculateBtn {
+            text-align: end;
+        }
+
+        div.btnBar {
+            display: flex;
+            justify-content: end;
+            gap: 0.3rem
+        }
+        
+        div.bmiBox {
+            height: 18rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span#bmiText {
+            font-weight: 900;
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <hr>
+    <fieldset>
+        <legend>Your Info</legend>
+        <div class="input">
+            <label for="weightInput">Weight (kg):</label>
+            <input id="weightInput" type="number" step="0.1" min="0" placeholder="Your weight">
+        </div>
+        <div class="input">
+            <label for="heightInput">Height (cm):</label>
+            <input id="heightInput" type="number" step="0.1" min="0" placeholder="Your height">
+        </div>
+        <div class="btnBar">
+            <button id="clearBtn" type="button">Clear</button>
+            <button id="calculateBtn" type="button">Calculate</button>
+        </div>
+    </fieldset>
+    <div class="bmiContainer"></div>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
